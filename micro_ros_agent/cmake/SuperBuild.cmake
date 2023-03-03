@@ -24,9 +24,9 @@ find_package(xrceagent 2 EXACT QUIET)
 if(NOT xrceagent_FOUND)
     ExternalProject_Add(xrceagent
             GIT_REPOSITORY
-                https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
+                https://github.com/srmainwaring/Micro-XRCE-DDS-Agent.git
             GIT_TAG
-                ros2
+              439bee399eb603d50c0345eeef533bc1d8687713
             PREFIX
                 ${PROJECT_BINARY_DIR}/agent
             INSTALL_DIR
@@ -50,6 +50,9 @@ if(NOT xrceagent_FOUND)
                 -DUAGENT_P2P_PROFILE:BOOL=OFF
                 -DUAGENT_BUILD_EXECUTABLE:BOOL=OFF
                 -DUAGENT_ISOLATED_INSTALL:BOOL=OFF
+                -DUAGENT_SOCKETCAN_PROFILE:BOOL=OFF
+                -DUAGENT_LOGGER_PROFILE:BOOL=OFF
+                -DUAGENT_USE_SYSTEM_LOGGER:BOOL=OFF
             )
 endif()
 
