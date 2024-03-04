@@ -51,7 +51,7 @@ if(NOT xrceagent_FOUND)
                 -DUAGENT_BUILD_EXECUTABLE:BOOL=OFF
                 -DUAGENT_ISOLATED_INSTALL:BOOL=OFF
                 -DUAGENT_SOCKETCAN_PROFILE:BOOL=OFF
-                -DUAGENT_LOGGER_PROFILE:BOOL=OFF
+                -DUAGENT_LOGGER_PROFILE:BOOL=ON
                 -DUAGENT_USE_SYSTEM_LOGGER:BOOL=OFF
             )
 endif()
